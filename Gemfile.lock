@@ -1,0 +1,15 @@
+GEM
+  specs:
+    addressable (2.3.4)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    multi_json (1.7.3)
+    multi_xml (0.5.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  addressable
+  httparty
