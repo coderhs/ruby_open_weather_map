@@ -7,7 +7,10 @@ module OpenWeather
     def self.city(city, options = { })
       query = Hash.new 
       query[:q] = city
-      run_call query.merge!(options), @api_url
+      send_request query.merge!(options), @api_url
     end
   end
 end
+
+
+
