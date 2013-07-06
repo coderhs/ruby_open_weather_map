@@ -1,3 +1,5 @@
+#Base class with functions common to all other classes
+
 require 'httparty'
 require 'addressable/uri'
 module OpenWeather
