@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'open_weather/version'
 
 Gem::Specification.new do |gem|
-  gem.name                 = "open_weather"
+  gem.name                 = "open-weather"
   gem.version              = OpenWeather::VERSION
   gem.authors              = ["HsPS <mailme@hsps.in>", "Deepak <deepakkumarnd@gmail.com>"]
   gem.email                = ['mailme@hsps.in']
