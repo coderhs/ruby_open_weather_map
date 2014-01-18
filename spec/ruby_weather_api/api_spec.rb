@@ -28,7 +28,7 @@ require 'spec_helper'
 # failure
 # {"message"=>"Error: Not found city", "cod"=>"404"}
 
-describe 'Open weather API' do
+describe 'Open weather Current API' do
   context '.city' do
     it 'return current weather for cochi' do
       response = OpenWeather::Current.city('Cochin, In')
@@ -62,6 +62,44 @@ describe 'Open weather API' do
     it 'returns error if the geocode is invalid' do
       response = OpenWeather::Current.geocode('181', '181')
       response['cod'].should eq("404")
+    end
+  end
+end
+
+describe 'Open weather Forecast API' do
+  context '.city' do
+    it 'return forecast weather for cochi' do
+      response = OpenWeather::Forecast.city('Cochin, In')
+      response['cod'].to_s.should eq("200")
+    end
+
+    it 'returns error if the city is invalid' do
+      response = OpenWeather::Forecast.city('Cochiiiiiin, In')
+      response['cod'].to_s.should eq("404")
+    end
+  end
+
+  context '.city_id' do
+    it 'return forecast weather for city id of cochi' do
+      response = OpenWeather::Forecast.city_id('1273874')
+      response['cod'].to_s.should eq("200")
+    end
+
+    it 'returns error if the city id is invalid' do
+      response = OpenWeather::Forecast.city('invalidid')
+      response['cod'].to_s.should eq("404")
+    end
+  end
+
+  context '.geocode' do
+    it 'return forecast weather for geocode of cochi' do
+      response = OpenWeather::Forecast.geocode('9.94', '76.26')
+      response['cod'].to_s.should eq("200")
+    end
+
+    it 'returns error if the geocode is invalid' do
+      response = OpenWeather::Forecast.geocode('181', '181')
+      response['cod'].to_s.should eq("404")
     end
   end
 end
