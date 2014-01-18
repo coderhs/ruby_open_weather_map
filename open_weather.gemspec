@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.executables          = gem.files.grep(/^bin/).map{ |f| File.basename(f) }
   gem.require_paths        = ["lib"]
   gem.add_development_dependency "rspec"
+
+  gem.add_runtime_dependency 'httparty'
+  gem.add_runtime_dependency 'addressable'
 end
