@@ -1,5 +1,5 @@
-require 'httparty'
-require 'addressable/uri'
+require 'net/http'
+require 'json'
 
 module OpenWeather
   class Base
@@ -37,16 +37,16 @@ module OpenWeather
     end
 
     def parse_response
-      @weather_info = @response
+      @weather_info = JSON.parse(@response)
       @status = @weather_info["cod"]
       @message = @weather_info["message"] unless @status
       @weather_info
     end
 
     def send_request(request)
-      uri = Addressable::URI.parse(request.url)
-      uri.query_values = request.options
-      HTTParty.get(uri.to_s)
+      uri = URI(request.url)
+      uri.query = URI.encode_www_form(request.options)
+      Net::HTTP.get(uri)
     end
   end
 end

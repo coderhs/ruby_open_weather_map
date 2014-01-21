@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # success response
-# 
+#
 # {"coord"=>{"lon"=>76.26, "lat"=>9.94},
 #  "sys"=>
 #   {"message"=>0.1938,
@@ -30,14 +30,6 @@ require 'spec_helper'
 # failure response
 #
 # {"message"=>"Error: Not found city", "cod"=>"404"}
-
-describe 'Connection Error' do
-  it 'return error when the network is unreachable' do
-      response = OpenWeather::Current.city('Cochin, In')
-      response['cod'].should eq(200)
-  end
-end
-
 
 describe 'Open weather Current API' do
   context '.city' do
