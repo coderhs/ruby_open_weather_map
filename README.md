@@ -33,6 +33,9 @@ Add the following to your **Gemfile**
     # get weather forecast by city name
     OpenWeather::Forecast.city("Cochin, IN")
 
+    # get weather forecast by city name in fahrenheit
+    OpenWeather::Forecast.city("Cochin, IN", units: 'fahrenheit')
+
     # get weather forecast by city id
     OpenWeather::Forecast.city_id("1273874")
 
