@@ -67,6 +67,19 @@ describe 'Open weather Current API' do
       response['cod'].should eq("404")
     end
   end
+
+  context 'units option' do
+    it 'returns the current temperature in requested units' do
+      response = OpenWeather::Current.city('Cochin, In', units: 'metric')
+      temp_metric = response['main']['temp']
+
+      response = OpenWeather::Current.city('Cochin, In', units: 'imperial')
+      temp_imperial = response['main']['temp']
+      farenheit_to_celsius = ((temp_imperial - 32) / 1.8000)
+
+      expect(farenheit_to_celsius).to be_within(0.01).of(temp_metric)
+    end
+  end
 end
 
 describe 'Open weather Forecast API' do
@@ -103,6 +116,19 @@ describe 'Open weather Forecast API' do
     it 'returns error if the geocode is invalid' do
       response = OpenWeather::Forecast.geocode('181', '181')
       response['cod'].to_s.should eq("404")
+    end
+  end
+
+  context 'units option' do
+    it 'returns the forecast in requested units' do
+      response = OpenWeather::Forecast.city('Cochin, In', units: 'metric')
+      temp_metric = response['list'].first['main']['temp']
+
+      response = OpenWeather::Forecast.city('Cochin, In', units: 'imperial')
+      temp_imperial = response['list'].first['main']['temp']
+      farenheit_to_celsius = ((temp_imperial - 32) / 1.8000)
+
+      expect(farenheit_to_celsius).to be_within(0.01).of(temp_metric)
     end
   end
 end

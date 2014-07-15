@@ -25,10 +25,16 @@ Add the following to your **Gemfile**
     # get current weather by geocode. (lat, lon)
     OpenWeather::Current.geocode(9.94, 76.26)
 
+    # get the current weather in degrees celsius
+    OpenWeather::Current.city("Cochin, IN", units: 'metric')
+
     # weather forecast APIs
 
     # get weather forecast by city name
     OpenWeather::Forecast.city("Cochin, IN")
+
+    # get weather forecast by city name in fahrenheit
+    OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
 
     # get weather forecast by city id
     OpenWeather::Forecast.city_id("1273874")
