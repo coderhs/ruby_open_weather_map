@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=1111111111&id=524901&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Aug 2014 10:35:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":37.62,"lat":55.75},"sys":{"type":1,"id":7323,"message":0.2126,"country":"RU","sunrise":1409192848,"sunset":1409243632},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":17.99,"pressure":1004,"humidity":63,"temp_min":16,"temp_max":23.7},"wind":{"speed":6,"deg":200},"clouds":{"all":75},"dt":1409220095,"id":524901,"name":"Moscow","cod":200}
+    http_version: 
+  recorded_at: Thu, 28 Aug 2014 10:35:16 GMT
+recorded_with: VCR 2.9.2

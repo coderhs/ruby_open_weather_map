@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?q=,Cochin,%20In&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Aug 2014 10:52:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":76.26,"lat":9.94},"sys":{"message":0.0316,"country":"India","sunrise":1409186752,"sunset":1409231181},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":79.96,"temp_min":79.96,"temp_max":79.96,"pressure":1020.95,"sea_level":1021.19,"grnd_level":1020.95,"humidity":99},"wind":{"speed":11.79,"deg":313.001},"clouds":{"all":88},"dt":1409222765,"id":1273874,"name":"Kochi","cod":200}
+    http_version: 
+  recorded_at: Thu, 28 Aug 2014 10:52:09 GMT
+recorded_with: VCR 2.9.2
