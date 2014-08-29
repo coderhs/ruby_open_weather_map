@@ -12,10 +12,11 @@ Add the following to your **Gemfile**
 
 ## Usage
 
+
+### Current weather information API
+
 ```ruby
 require 'open_weather'
-
-# current weather APIs
 
 # get current weather by city name
 OpenWeather::Current.city("Cochin, IN")
@@ -28,8 +29,16 @@ OpenWeather::Current.geocode(9.94, 76.26)
 
 # get the current weather in degrees celsius
 OpenWeather::Current.city("Cochin, IN", units: 'metric')
+```
 
-# weather forecast APIs
+Documentation about the current weather end-point:
+http://openweathermap.org/current
+
+
+### Weather forecast API
+
+```ruby
+require 'open_weather'
 
 # get weather forecast by city name
 OpenWeather::Forecast.city("Cochin, IN")
@@ -44,6 +53,9 @@ OpenWeather::Forecast.city_id("1273874")
 OpenWeather::Forecast.geocode(9.94, 76.26)
 ```
 
+Doucumentation about the weather forecast end-point:
+http://openweathermap.org/forecast
+
 #### Using the API key
 
 ```ruby
@@ -51,6 +63,9 @@ OpenWeather::Forecast.geocode(9.94, 76.26)
 options = { units: "metric", APPID: 1111111111 }
 OpenWeather::Current.city("Berlin, DE", options)
 ```
+
+How to get an API key and tips for an effective usage of the API:
+http://openweathermap.org/appid
 
  
 ## Contributing 
