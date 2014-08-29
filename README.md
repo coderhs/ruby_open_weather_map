@@ -12,35 +12,46 @@ Add the following to your **Gemfile**
 
 ## Usage
 
-    require 'open_weather'
+```ruby
+require 'open_weather'
 
-    # current weather APIs
+# current weather APIs
 
-    # get current weather by city name
-    OpenWeather::Current.city("Cochin, IN")
+# get current weather by city name
+OpenWeather::Current.city("Cochin, IN")
 
-    # get current weather by city id
-    OpenWeather::Current.city_id("1273874")
+# get current weather by city id
+OpenWeather::Current.city_id("1273874")
 
-    # get current weather by geocode. (lat, lon)
-    OpenWeather::Current.geocode(9.94, 76.26)
+# get current weather by geocode. (lat, lon)
+OpenWeather::Current.geocode(9.94, 76.26)
 
-    # get the current weather in degrees celsius
-    OpenWeather::Current.city("Cochin, IN", units: 'metric')
+# get the current weather in degrees celsius
+OpenWeather::Current.city("Cochin, IN", units: 'metric')
 
-    # weather forecast APIs
+# weather forecast APIs
 
-    # get weather forecast by city name
-    OpenWeather::Forecast.city("Cochin, IN")
+# get weather forecast by city name
+OpenWeather::Forecast.city("Cochin, IN")
 
-    # get weather forecast by city name in fahrenheit
-    OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
+# get weather forecast by city name in fahrenheit
+OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
 
-    # get weather forecast by city id
-    OpenWeather::Forecast.city_id("1273874")
+# get weather forecast by city id
+OpenWeather::Forecast.city_id("1273874")
 
-    # get weather forecast by geocode. (lat, lon)
-    OpenWeather::Forecast.geocode(9.94, 76.26)
+# get weather forecast by geocode. (lat, lon)
+OpenWeather::Forecast.geocode(9.94, 76.26)
+```
+
+#### Using the API key
+
+```ruby
+# get current weather by city name
+options = { units: "metric", APPID: 1111111111 }
+OpenWeather::Current.city("Berlin, DE", options)
+```
+
  
 ## Contributing 
 
