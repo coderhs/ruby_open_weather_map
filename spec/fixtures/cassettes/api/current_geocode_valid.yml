@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?lat=9.94&lon=76.26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Aug 2014 10:50:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOjc2LjI2LCJsYXQiOjkuOTR9LCJzeXMiOnsibWVz
+        c2FnZSI6MC4wMTkxLCJjb3VudHJ5IjoiSU4iLCJzdW5yaXNlIjoxNDA5MTg2
+        NzUzLCJzdW5zZXQiOjE0MDkyMzExODF9LCJ3ZWF0aGVyIjpbeyJpZCI6ODA0
+        LCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJvdmVyY2FzdCBjbG91
+        ZHMiLCJpY29uIjoiMDRkIn1dLCJiYXNlIjoiY21jIHN0YXRpb25zIiwibWFp
+        biI6eyJ0ZW1wIjoyOTkuNzkzLCJ0ZW1wX21pbiI6Mjk5Ljc5MywidGVtcF9t
+        YXgiOjI5OS43OTMsInByZXNzdXJlIjoxMDIwLjk1LCJzZWFfbGV2ZWwiOjEw
+        MjEuMTksImdybmRfbGV2ZWwiOjEwMjAuOTUsImh1bWlkaXR5Ijo5OX0sIndp
+        bmQiOnsic3BlZWQiOjUuNDYsImRlZyI6MzEzLjAwMX0sImNsb3VkcyI6eyJh
+        bGwiOjg4fSwiZHQiOjE0MDkyMjI2MjcsImlkIjoxMjcyMDE4LCJuYW1lIjoi
+        RXJuxIFrdWxhbSIsImNvZCI6MjAwfQo=
+    http_version: 
+  recorded_at: Thu, 28 Aug 2014 10:50:48 GMT
+recorded_with: VCR 2.9.2

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=1111111111&q=,Berlin,%20DE&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 28 Aug 2014 10:32:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":13.38,"lat":52.52},"sys":{"type":1,"id":4892,"message":0.0219,"country":"Germany","sunrise":1409199092,"sunset":1409249019},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"cmc stations","main":{"temp":296.02,"pressure":1018,"humidity":35,"temp_min":294.15,"temp_max":299.26},"wind":{"speed":2.6,"deg":280,"var_beg":260,"var_end":320},"clouds":{"all":40},"dt":1409221912,"id":2822234,"name":"Berlin","cod":200}
+    http_version: 
+  recorded_at: Thu, 28 Aug 2014 10:32:37 GMT
+recorded_with: VCR 2.9.2
