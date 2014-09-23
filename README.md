@@ -67,19 +67,19 @@ OpenWeather::Current.city("Berlin, DE", options)
 How to get an API key and tips for an effective usage of the API:
 http://openweathermap.org/appid
 
- 
-## Contributing 
+
+## Contributing
 
   Fork it
-  
+
   Create your feature branch (git checkout -b my-new-feature)
-  
+
   Commit your changes (git commit -am 'Added some feature')
-  
+
   Push to the branch (git push origin my-new-feature)
-  
+
   Create new Pull Request
-  
+
 --------
-  
-**Created during the Hacker Saturdays hosted by Kerala/Kochi Ruby Users Group**
+
+**This gem was created during the Hacker Saturdays hosted by [Kerala/Kochi Ruby Users Group](https://krug.github.io)**
