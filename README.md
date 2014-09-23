@@ -67,6 +67,16 @@ OpenWeather::Current.city("Berlin, DE", options)
 How to get an API key and tips for an effective usage of the API:
 http://openweathermap.org/appid
 
+#### Multilingual support
+
+```ruby
+# get current weather in german
+OpenWeather::Current.city("Berlin, DE", lang: "de")
+```
+
+Available languages are listed at:
+http://openweathermap.org/current#multi
+
 
 ## Contributing
 
