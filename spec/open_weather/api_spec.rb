@@ -130,4 +130,22 @@ describe 'Open weather Forecast API' do
       expect(farenheit_to_celsius).to be_within(temp_metric-1).of(temp_metric+1)
     end
   end
+  context 'cnt option' do
+    it "returns the daily forecast in requested cnt" do
+      response = VCR.use_cassette("api/forecast_city_cnt_valid") do
+        OpenWeather::Forecast.city('Cochin, In', cnt: 10)
+      end
+      response['list'].size.should eq(10)
+
+      response = VCR.use_cassette("api/forecast_city_id_cnt_valid") do
+        OpenWeather::Forecast.city_id('1273874', cnt: 10)
+      end
+      response['list'].size.should eq(10)
+
+      response = VCR.use_cassette("api/forecast_geocode_cnt_valid") do
+        OpenWeather::Forecast.geocode('9.94', '76.26', cnt: 10)
+      end
+      response['list'].size.should eq(10)
+    end
+  end
 end

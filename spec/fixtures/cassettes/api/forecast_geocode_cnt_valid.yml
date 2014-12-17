@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/forecast/daily?cnt=10&lat=9.94&lon=76.26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 17 Dec 2014 18:18:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cod":"200","message":0.7051,"city":{"id":1278345,"name":"Arukutti","coord":{"lon":76.349998,"lat":9.86667},"country":"IN","population":0},"cnt":10,"list":[{"dt":1418796000,"temp":{"day":300.41,"min":299.66,"max":300.41,"night":299.66,"eve":300.41,"morn":300.41},"pressure":1019.19,"humidity":77,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":4.12,"deg":100,"clouds":56,"rain":2.75},{"dt":1418882400,"temp":{"day":302.98,"min":299.26,"max":305.37,"night":300.74,"eve":304.38,"morn":299.26},"pressure":1018.4,"humidity":67,"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],"speed":5.82,"deg":61,"clouds":12},{"dt":1418968800,"temp":{"day":304.67,"min":299.09,"max":305.83,"night":301.38,"eve":304.88,"morn":299.09},"pressure":1019.45,"humidity":63,"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"speed":6.12,"deg":61,"clouds":32},{"dt":1419055200,"temp":{"day":304.75,"min":299.26,"max":306.12,"night":300.54,"eve":305.42,"morn":299.26},"pressure":1019.09,"humidity":61,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":4.17,"deg":59,"clouds":0},{"dt":1419141600,"temp":{"day":301.33,"min":300.37,"max":301.5,"night":300.8,"eve":301.5,"morn":300.37},"pressure":1021.8,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":3.21,"deg":24,"clouds":1},{"dt":1419228000,"temp":{"day":302.21,"min":300.57,"max":302.21,"night":301.4,"eve":301.99,"morn":300.57},"pressure":1020.28,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.6,"deg":26,"clouds":83,"rain":1.04},{"dt":1419314400,"temp":{"day":302.25,"min":301.03,"max":302.54,"night":301.9,"eve":302.54,"morn":301.03},"pressure":1020.8,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.28,"deg":333,"clouds":6,"rain":2.18},{"dt":1419400800,"temp":{"day":302.61,"min":300.03,"max":302.95,"night":302.3,"eve":302.95,"morn":300.03},"pressure":1022.5,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":2.28,"deg":39,"clouds":2},{"dt":1419487200,"temp":{"day":301.99,"min":300.67,"max":302.3,"night":301.76,"eve":302.3,"morn":300.67},"pressure":1022.46,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.45,"deg":54,"clouds":3,"rain":0.55},{"dt":1419573600,"temp":{"day":302.28,"min":300.95,"max":302.46,"night":301.86,"eve":302.46,"morn":300.95},"pressure":1021.22,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":2.35,"deg":33,"clouds":0}]}
+    http_version: 
+  recorded_at: Wed, 17 Dec 2014 18:16:59 GMT
+recorded_with: VCR 2.9.2
