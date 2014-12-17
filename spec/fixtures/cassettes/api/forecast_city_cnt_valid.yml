@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/forecast/daily?cnt=10&q=,Cochin,%20In
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 17 Dec 2014 18:18:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cod":"200","message":1.2157,"city":{"id":0,"name":"Kochi","coord":{"lon":76.26145,"lat":9.93606},"country":"India","population":0},"cnt":10,"list":[{"dt":1418796000,"temp":{"day":300.41,"min":299.66,"max":300.41,"night":299.66,"eve":300.41,"morn":300.41},"pressure":1019.19,"humidity":77,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":4.12,"deg":100,"clouds":56,"rain":2.75},{"dt":1418882400,"temp":{"day":303.75,"min":298.42,"max":304.51,"night":300.64,"eve":303.7,"morn":298.42},"pressure":1018.51,"humidity":66,"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],"speed":5.47,"deg":60,"clouds":24},{"dt":1418968800,"temp":{"day":303.65,"min":299.07,"max":305.03,"night":301.01,"eve":304.43,"morn":299.07},"pressure":1019.68,"humidity":66,"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"speed":7.01,"deg":58,"clouds":76},{"dt":1419055200,"temp":{"day":303.92,"min":299.18,"max":305.25,"night":301.03,"eve":304.35,"morn":299.18},"pressure":1019.3,"humidity":64,"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"speed":4.86,"deg":63,"clouds":56},{"dt":1419141600,"temp":{"day":305.17,"min":298.27,"max":306.37,"night":301,"eve":304.62,"morn":298.27},"pressure":1016.96,"humidity":61,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":1.96,"deg":44,"clouds":0},{"dt":1419228000,"temp":{"day":302.81,"min":301.01,"max":302.81,"night":301.12,"eve":302.22,"morn":301.01},"pressure":1021.66,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":4.99,"deg":13,"clouds":19,"rain":1.28},{"dt":1419314400,"temp":{"day":301.74,"min":299.68,"max":302.55,"night":301.63,"eve":302.55,"morn":299.68},"pressure":1023.82,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":3.01,"deg":99,"clouds":0,"rain":0.72},{"dt":1419400800,"temp":{"day":301.96,"min":299.7,"max":302.72,"night":302.05,"eve":302.72,"morn":299.7},"pressure":1024.62,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":3.22,"deg":40,"clouds":0},{"dt":1419487200,"temp":{"day":301.98,"min":300.43,"max":303.64,"night":302.23,"eve":303.64,"morn":300.43},"pressure":1023.61,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":4.5,"deg":26,"clouds":0},{"dt":1419573600,"temp":{"day":301.64,"min":300.03,"max":302.52,"night":302.09,"eve":302.52,"morn":300.03},"pressure":1021.53,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":3.31,"deg":28,"clouds":0}]}
+    http_version: 
+  recorded_at: Wed, 17 Dec 2014 18:16:57 GMT
+recorded_with: VCR 2.9.2

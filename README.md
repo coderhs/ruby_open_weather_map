@@ -77,6 +77,15 @@ OpenWeather::Current.city("Berlin, DE", lang: "de")
 Available languages are listed at:
 http://openweathermap.org/current#multi
 
+#### Daily forecast
+
+```ruby
+# get 10 days forecast by city name
+OpenWeather::Forecast.city("Cochin, In", cnt: 10)
+```
+
+cnt number of days returned (from 1 to 16)
+
 
 ## Contributing
 
