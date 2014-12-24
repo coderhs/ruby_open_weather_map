@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/forecast/daily?lat=9.94&lon=76.26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 24 Dec 2014 21:15:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cod":"200","message":0.0021,"city":{"id":1278345,"name":"Arukutti","coord":{"lon":76.349998,"lat":9.86667},"country":"IN","population":0},"cnt":7,"list":[{"dt":1419400800,"temp":{"day":297.85,"min":297.85,"max":297.85,"night":297.85,"eve":297.85,"morn":297.85},"pressure":1021.02,"humidity":95,"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}],"speed":1.32,"deg":253,"clouds":36},{"dt":1419487200,"temp":{"day":303.36,"min":296.48,"max":305.05,"night":298.14,"eve":303.08,"morn":296.48},"pressure":1020,"humidity":67,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":2.19,"deg":46,"clouds":0},{"dt":1419573600,"temp":{"day":303.52,"min":297.32,"max":305.08,"night":299.32,"eve":302.99,"morn":297.32},"pressure":1017.68,"humidity":59,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":3.57,"deg":58,"clouds":0},{"dt":1419660000,"temp":{"day":298.63,"min":296.19,"max":301.16,"night":298.48,"eve":301.16,"morn":297.25},"pressure":1018.07,"humidity":82,"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"speed":5.26,"deg":26,"clouds":88},{"dt":1419746400,"temp":{"day":298.68,"min":298.68,"max":299.72,"night":299.25,"eve":299.72,"morn":299.57},"pressure":1020.98,"humidity":0,"weather":[{"id":502,"main":"Rain","description":"heavy intensity rain","icon":"10d"}],"speed":3.12,"deg":175,"clouds":68,"rain":40.09},{"dt":1419832800,"temp":{"day":299.33,"min":299.08,"max":300.85,"night":300.67,"eve":300.85,"morn":299.08},"pressure":1017.96,"humidity":0,"weather":[{"id":502,"main":"Rain","description":"heavy intensity rain","icon":"10d"}],"speed":4.96,"deg":310,"clouds":51,"rain":20.77},{"dt":1419919200,"temp":{"day":301.41,"min":300.2,"max":301.49,"night":300.2,"eve":301.49,"morn":300.57},"pressure":1017.8,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":4.62,"deg":337,"clouds":0,"rain":0.58}]}
+    http_version: 
+  recorded_at: Wed, 24 Dec 2014 21:15:14 GMT
+recorded_with: VCR 2.9.2
