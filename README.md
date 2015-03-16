@@ -51,6 +51,21 @@ OpenWeather::Forecast.city_id("1273874")
 
 # get weather forecast by geocode. (lat, lon)
 OpenWeather::Forecast.geocode(9.94, 76.26)
+
+# get daily weather forecast by city name
+OpenWeather::ForecastDaily.city("Cochin, IN")
+
+# get daily weather forecast by city name in fahrenheit
+OpenWeather::ForecastDaily.city("Cochin, IN", units: 'imperial')
+
+# get daily weather forecast by city id
+OpenWeather::ForecastDaily.city_id("1273874")
+
+# get daily weather forecast by geocode. (lat, lon)
+OpenWeather::ForecastDaily.geocode(9.94, 76.26)
+
+# get daily weather forecast for 6 days
+OpenWeather::ForecastDaily.city_id("1273874", cnt: 6)
 ```
 
 Doucumentation about the weather forecast end-point:

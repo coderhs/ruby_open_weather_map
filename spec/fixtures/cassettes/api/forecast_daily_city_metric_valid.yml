@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/forecast/daily?q=,Cochin,%20In&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 24 Dec 2014 21:15:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cod":"200","message":0.0484,"city":{"id":"1273874","name":"Kochi","coord":{"lon":76.2615,"lat":9.93606},"country":"India","population":0},"cnt":7,"list":[{"dt":1419400800,"temp":{"day":26.44,"min":26.44,"max":26.44,"night":26.44,"eve":26.44,"morn":26.44},"pressure":1023.99,"humidity":100,"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],"speed":1.22,"deg":179,"clouds":88},{"dt":1419487200,"temp":{"day":25.82,"min":23.55,"max":27.32,"night":26.64,"eve":27.32,"morn":23.87},"pressure":1025.89,"humidity":100,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":3.32,"deg":202,"clouds":0,"rain":5},{"dt":1419573600,"temp":{"day":27.24,"min":26.27,"max":27.98,"night":26.79,"eve":27.7,"morn":26.27},"pressure":1023.35,"humidity":99,"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"speed":2.37,"deg":136,"clouds":48},{"dt":1419660000,"temp":{"day":27.51,"min":24.2,"max":28.34,"night":24.24,"eve":28.34,"morn":26.24},"pressure":1021.68,"humidity":94,"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"speed":5.21,"deg":357,"clouds":48},{"dt":1419746400,"temp":{"day":27.92,"min":25.04,"max":28.89,"night":27.85,"eve":28.84,"morn":25.04},"pressure":1021.79,"humidity":94,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"02d"}],"speed":2.82,"deg":352,"clouds":8},{"dt":1419832800,"temp":{"day":29.64,"min":29.44,"max":29.64,"night":29.44,"eve":29.54,"morn":29.53},"pressure":1020.3,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":5.4,"deg":337,"clouds":2},{"dt":1419919200,"temp":{"day":29.32,"min":29.16,"max":29.43,"night":29.29,"eve":29.16,"morn":29.43},"pressure":1018.74,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":7.94,"deg":329,"clouds":20}]}
+    http_version: 
+  recorded_at: Wed, 24 Dec 2014 21:15:16 GMT
+recorded_with: VCR 2.9.2
