@@ -2,6 +2,8 @@
 
 ## Installation
 
+Latest version `0.11.0`
+
 Add the following to your **Gemfile**
 
     gem 'open-weather'
