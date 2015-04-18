@@ -47,7 +47,7 @@ module OpenWeather
     end
 
     def send_request
-      uri = URI(url)
+      uri       = URI(@url)
       uri.query = URI.encode_www_form(options)
       Net::HTTP.get(uri)
     end
