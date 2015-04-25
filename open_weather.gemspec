@@ -5,6 +5,7 @@ Gem::Specification.new do |gem|
   gem.name                 = "open-weather"
   gem.version              = OpenWeather::VERSION
   gem.authors              = ["HsPS mailme@hsps.in", "Deepak deepakkumarnd@gmail.com"]
+  gem.licenses             = ['MIT']
   gem.email                = ['mailme@hsps.in']
   gem.homepage             = "https://github.com/coderhs/ruby_open_weather_map"
   gem.summary              = %q{ A ruby wrapper for Open Weather Map API. }
