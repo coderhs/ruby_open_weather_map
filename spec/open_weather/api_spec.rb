@@ -80,6 +80,20 @@ describe 'Open weather Forecast API' do
       end
       response['cod'].to_s.should eq('404')
     end
+
+    it 'returns error if json parse error' do
+      response = VCR.use_cassette('api/forecast_json_parse_error') do
+        OpenWeather::Forecast.city('Cochin, In')
+      end
+      response['cod'].to_s.should eq('500')
+    end
+
+    it 'returns error if server return 500' do
+      response = VCR.use_cassette('api/forecast_server_error') do
+        OpenWeather::Forecast.city('Cochin, In')
+      end
+      response['cod'].to_s.should eq('500')
+    end
   end
 
   context '.city_id' do

@@ -7,14 +7,26 @@ module OpenWeather
     attr_reader :url, :options, :weather_info, :status, :message
 
     def initialize(url, options)
-      @status  = false
-      @url     = url
-      @options = extract_options!(options)
+      @status       = false
+      @url          = url
+      @options      = extract_options!(options)
+      @weather_info = { 'cod': nil, 'message': '' }
     end
 
     def retrive
       response = send_request unless @options.empty?
-      parse_response(response)
+
+      if ![200, 404].include?(response.code.to_i)
+        @weather_info['cod']      = response.code.to_i
+        @weather_info['message']  = response.message
+      else
+        parse_response(response.body)
+      end
+
+      @status   = @weather_info['cod']
+      @message  = @weather_info['message']
+
+      @weather_info
     end
 
     def success?
@@ -40,16 +52,21 @@ module OpenWeather
 
     def parse_response(response)
       return if response.nil?
-      @weather_info = JSON.parse(response)
-      @status       = @weather_info['cod']
-      @message      = @weather_info['message'] unless @status
+
+      begin
+        @weather_info = JSON.parse(response)
+      rescue JSON::ParserError
+        @weather_info['cod']      = 500
+        @weather_info['message']  = 'JSON parse error'
+      end
+
       @weather_info
     end
 
     def send_request
       uri       = URI(@url)
       uri.query = URI.encode_www_form(options)
-      Net::HTTP.get(uri)
+      Net::HTTP.get_response(uri)
     end
   end
 end
