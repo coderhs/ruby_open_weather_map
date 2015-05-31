@@ -19,8 +19,6 @@ module OpenWeather
       if ![200, 404].include?(response.code.to_i)
         @weather_info['cod']      = response.code.to_i
         @weather_info['message']  = response.message
-
-        @weather_info
       else
         parse_response(response.body)
       end
