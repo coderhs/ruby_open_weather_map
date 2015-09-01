@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
 
-gem 'rspec'
-gem 'vcr'
-gem 'webmock'
+# gem's dependencies should be in open_weather.gemspec
+gemspec
