@@ -12,7 +12,7 @@ module OpenWeather
       @options = extract_options!(options)
     end
 
-    def retrive
+    def retrieve
       response = send_request unless @options.empty?
       parse_response(response)
     end
