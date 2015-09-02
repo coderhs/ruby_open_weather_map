@@ -1,5 +1,7 @@
 ## A ruby wrapper for Open Weather Map API.
 
+[![Build Status](https://travis-ci.org/coderhs/ruby_open_weather_map.svg?branch=master)](https://travis-ci.org/coderhs/ruby_open_weather_map)
+
 ## Installation
 
 Latest version `0.11.0`
