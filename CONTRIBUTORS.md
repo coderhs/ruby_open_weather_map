@@ -13,3 +13,5 @@
 [ssendev](https://github.com/ssendev)
 
 [Nithin Bekal](https://github.com/nithinbekal)
+
+[Jesse Emond](https://github.com/JesseEmond)
