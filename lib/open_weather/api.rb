@@ -19,7 +19,21 @@ module OpenWeather
     end
   end
 
+  module SeveralCitiesClassMethods
+    # City Ids, an array of integer values. Eg, [2172797, 524901]
+    # Usage: OpenWeather::Current.cities([2172797, 524901])
+    def cities(ids, options = {})
+      url = 'http://api.openweathermap.org/data/2.5/group'
+      ids = ids.join ',' # get comma-separated list, as required by the API
+      new(options.merge(id: ids)).retrieve url
+    end
+  end
+
   class Base
     extend ClassMethods
+  end
+
+  class Current
+    extend SeveralCitiesClassMethods
   end
 end
