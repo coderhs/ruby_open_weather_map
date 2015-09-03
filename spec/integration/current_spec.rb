@@ -61,11 +61,11 @@ describe 'Current weather information with APPID' do
     end
 
     it 'returns results' do
-      expect(weather).to inclue('weather')
+      expect(weather).to include('list')
     end
 
-    it 'returns an array' do
-      expect(weather).to be_kind_of(Array)
+    it 'returns results as an array' do
+      expect(weather['list']).to be_kind_of(Array)
     end
   end
 end

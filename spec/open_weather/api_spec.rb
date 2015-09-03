@@ -52,14 +52,14 @@ describe 'Open weather Current API' do
       response = VCR.use_cassette('api/current_cities_valid') do
         OpenWeather::Current.cities([524901,703448,2643743])
       end
-      response['cod'].should eq(200)
+      response['cnt'].should eq(3)
     end
 
-    it 'return error if list of cities is invalid' do
-      response = VCR.use_cassette('api/current_cities_valid') do
+    it 'return empty list if cities are invalid' do
+      response = VCR.use_cassette('api/current_cities_invalid') do
         OpenWeather::Current.cities([42,1000])
       end
-      response['cod'].should eq('404')
+      response['cnt'].should eq(0)
     end
   end
 
