@@ -47,6 +47,22 @@ describe 'Open weather Current API' do
     end
   end
 
+  context '.cities' do
+    it 'return current weather for list of cities' do
+      response = VCR.use_cassette('api/current_cities_valid') do
+        OpenWeather::Current.cities([524901,703448,2643743])
+      end
+      response['cod'].should eq(200)
+    end
+
+    it 'return error if list of cities is invalid' do
+      response = VCR.use_cassette('api/current_cities_valid') do
+        OpenWeather::Current.cities([42,1000])
+      end
+      response['cod'].should eq('404')
+    end
+  end
+
   context 'units option' do
     it 'returns the current temperature in requested units' do
       response = VCR.use_cassette('api/current_city_metric_valid') do

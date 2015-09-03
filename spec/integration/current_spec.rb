@@ -52,4 +52,20 @@ describe 'Current weather information with APPID' do
       expect(weather).to include('weather')
     end
   end
+
+  describe 'searching by city ids' do
+    let(:weather) do
+      VCR.use_cassette('integration/current_by_cities') do
+        OpenWeather::Current.cities([524901,703448,2643743], options)
+      end
+    end
+
+    it 'returns results' do
+      expect(weather).to inclue('weather')
+    end
+
+    it 'returns an array' do
+      expect(weather).to be_kind_of(Array)
+    end
+  end
 end
