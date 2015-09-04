@@ -24,8 +24,24 @@ module OpenWeather
     # Usage: OpenWeather::Current.cities([2172797, 524901])
     def cities(ids, options = {})
       url = 'http://api.openweathermap.org/data/2.5/group'
-      ids = ids.join ',' # get comma-separated list, as required by the API
+      ids = encode_array ids
       new(options.merge(id: ids)).retrieve url
+    end
+
+    # Bounding box (lat and lon of top left and bottom right points, map zoom)
+    # Usage: OpenWeather::Current.rectangle_zone(12,32,15,37,10)
+    def rectangle_zone(top_left_lat, top_left_lon,
+                       bottom_right_lat, bottom_right_lon, map_zoom)
+      url = 'http://api.openweathermap.org/data/2.5/box/city'
+      bbox = encode_array [top_left_lat, top_left_lon, bottom_right_lat,
+              bottom_right_lon, map_zoom]
+      new(options.merge(bbox: bbox)).retrieve url
+    end
+
+    private
+    # Encodes an array in the format expected by the API (comma-separated list)
+    def encode_array(arr)
+      arr.join ','
     end
   end
 
