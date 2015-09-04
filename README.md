@@ -4,7 +4,7 @@
 
 ## Installation
 
-Latest version `0.11.0`
+Latest version `0.12.0`
 
 Add the following to your **Gemfile**
 
