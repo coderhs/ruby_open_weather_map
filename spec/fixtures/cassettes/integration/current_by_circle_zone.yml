@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/find?APPID=1111111111&cnt=10&lat=55.5&lon=37.5&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 04 Sep 2015 15:08:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlIjoiYWNjdXJhdGUiLCJjb2QiOiIyMDAiLCJjb3VudCI6MTAs
+        Imxpc3QiOlt7ImlkIjo0OTUyNjAsIm5hbWUiOiJTaGNoZXJiaW5rYSIsImNv
+        b3JkIjp7ImxvbiI6MzcuNTU5NzE5LCJsYXQiOjU1LjQ5OTcyMn0sIm1haW4i
+        OnsidGVtcCI6MTUuNjcsInByZXNzdXJlIjoxMDEyLCJodW1pZGl0eSI6Nzcs
+        InRlbXBfbWluIjoxNC40NCwidGVtcF9tYXgiOjE3fSwiZHQiOjE0NDEzNzkw
+        MjgsIndpbmQiOnsic3BlZWQiOjMsImRlZyI6MzIwfSwic3lzIjp7ImNvdW50
+        cnkiOiIifSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVyIjpbeyJpZCI6
+        ODAzLCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9rZW4gY2xv
+        dWRzIiwiaWNvbiI6IjA0ZCJ9XX0seyJpZCI6NTY0NTE3LCJuYW1lIjoiRHVi
+        cm92aXRzeSIsImNvb3JkIjp7ImxvbiI6MzcuNDg2Njk4LCJsYXQiOjU1LjQz
+        OTY5fSwibWFpbiI6eyJ0ZW1wIjoxNS40NiwicHJlc3N1cmUiOjEwMTIsImh1
+        bWlkaXR5Ijo3NywidGVtcF9taW4iOjExLjExLCJ0ZW1wX21heCI6MTcuNH0s
+        ImR0IjoxNDQxMzc4NTQzLCJ3aW5kIjp7InNwZWVkIjozLCJkZWciOjMyMH0s
+        InN5cyI6eyJjb3VudHJ5IjoiIn0sImNsb3VkcyI6eyJhbGwiOjc1fSwid2Vh
+        dGhlciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3VkcyIsImRlc2NyaXB0aW9u
+        IjoiYnJva2VuIGNsb3VkcyIsImljb24iOiIwNGQifV19LHsiaWQiOjU3MDU3
+        OCwibmFtZSI6IkJ1dG92byIsImNvb3JkIjp7ImxvbiI6MzcuNTc5NzIsImxh
+        dCI6NTUuNTQ4MzI4fSwibWFpbiI6eyJ0ZW1wIjoxNS42NywicHJlc3N1cmUi
+        OjEwMTIsImh1bWlkaXR5Ijo3NywidGVtcF9taW4iOjE0LjQ0LCJ0ZW1wX21h
+        eCI6MTd9LCJkdCI6MTQ0MTM3OTAyOCwid2luZCI6eyJzcGVlZCI6MywiZGVn
+        IjozMjB9LCJzeXMiOnsiY291bnRyeSI6IiJ9LCJjbG91ZHMiOnsiYWxsIjo3
+        NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMsIm1haW4iOiJDbG91ZHMiLCJkZXNj
+        cmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMiLCJpY29uIjoiMDRkIn1dfSx7Imlk
+        Ijo1NDU3ODIsIm5hbWUiOiJLb21tdW5hcmthIiwiY29vcmQiOnsibG9uIjoz
+        Ny40ODkzMTksImxhdCI6NTUuNTY5NTE5fSwibWFpbiI6eyJ0ZW1wIjoxNS40
+        NiwicHJlc3N1cmUiOjEwMTIsImh1bWlkaXR5Ijo3NywidGVtcF9taW4iOjEx
+        LjExLCJ0ZW1wX21heCI6MTcuNH0sImR0IjoxNDQxMzc5MDI4LCJ3aW5kIjp7
+        InNwZWVkIjozLCJkZWciOjMyMH0sInN5cyI6eyJjb3VudHJ5IjoiIn0sImNs
+        b3VkcyI6eyJhbGwiOjc1fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFpbiI6
+        IkNsb3VkcyIsImRlc2NyaXB0aW9uIjoiYnJva2VuIGNsb3VkcyIsImljb24i
+        OiIwNGQifV19LHsiaWQiOjY0MTc0OTAsIm5hbWUiOiJMZXNwYXJra2hveiIs
+        ImNvb3JkIjp7ImxvbiI6MzcuNjAxMzkxLCJsYXQiOjU1LjU0MzA2fSwibWFp
+        biI6eyJ0ZW1wIjoxNS42NywicHJlc3N1cmUiOjEwMTIsImh1bWlkaXR5Ijo3
+        NywidGVtcF9taW4iOjE0LjQ0LCJ0ZW1wX21heCI6MTd9LCJkdCI6MTQ0MTM3
+        OTAyOCwid2luZCI6eyJzcGVlZCI6MywiZGVnIjozMjB9LCJzeXMiOnsiY291
+        bnRyeSI6IiJ9LCJjbG91ZHMiOnsiYWxsIjo3NX0sIndlYXRoZXIiOlt7Imlk
+        Ijo4MDMsIm1haW4iOiJDbG91ZHMiLCJkZXNjcmlwdGlvbiI6ImJyb2tlbiBj
+        bG91ZHMiLCJpY29uIjoiMDRkIn1dfSx7ImlkIjo1MjY3MzYsIm5hbWUiOiJT
+        ZWTigJltb3kgTWlrcm9yYXlvbiIsImNvb3JkIjp7ImxvbiI6MzcuNTc5NzIs
+        ImxhdCI6NTUuNTYyMjIyfSwibWFpbiI6eyJ0ZW1wIjoxNS42NywicHJlc3N1
+        cmUiOjEwMTIsImh1bWlkaXR5Ijo3NywidGVtcF9taW4iOjE0LjQ0LCJ0ZW1w
+        X21heCI6MTd9LCJkdCI6MTQ0MTM3OTAyOCwid2luZCI6eyJzcGVlZCI6Mywi
+        ZGVnIjozMjB9LCJzeXMiOnsiY291bnRyeSI6IiJ9LCJjbG91ZHMiOnsiYWxs
+        Ijo3NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMsIm1haW4iOiJDbG91ZHMiLCJk
+        ZXNjcmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMiLCJpY29uIjoiMDRkIn1dfSx7
+        ImlkIjo0NzMwNTEsIm5hbWUiOiJWbGFz4oCZeWV2byIsImNvb3JkIjp7Imxv
+        biI6MzcuMzc5NDQ0LCJsYXQiOjU1LjQ2MDI3OH0sIm1haW4iOnsidGVtcCI6
+        MTYuMDIsInByZXNzdXJlIjoxMDEyLCJodW1pZGl0eSI6NzcsInRlbXBfbWlu
+        IjoxNC40NCwidGVtcF9tYXgiOjE3LjR9LCJkdCI6MTQ0MTM3OTAyOCwid2lu
+        ZCI6eyJzcGVlZCI6MywiZGVnIjozMjB9LCJzeXMiOnsiY291bnRyeSI6IiJ9
+        LCJjbG91ZHMiOnsiYWxsIjo3NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMsIm1h
+        aW4iOiJDbG91ZHMiLCJkZXNjcmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMiLCJp
+        Y29uIjoiMDRkIn1dfSx7ImlkIjo1Nzg2ODAsIm5hbWUiOiJCYWNodXJpbm8i
+        LCJjb29yZCI6eyJsb24iOjM3LjUyLCJsYXQiOjU1LjU4MDAwMn0sIm1haW4i
+        OnsidGVtcCI6MTUuNjcsInByZXNzdXJlIjoxMDEyLCJodW1pZGl0eSI6Nzcs
+        InRlbXBfbWluIjoxNC40NCwidGVtcF9tYXgiOjE3fSwiZHQiOjE0NDEzNzkw
+        MjgsIndpbmQiOnsic3BlZWQiOjMsImRlZyI6MzIwfSwic3lzIjp7ImNvdW50
+        cnkiOiIifSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVyIjpbeyJpZCI6
+        ODAzLCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9rZW4gY2xv
+        dWRzIiwiaWNvbiI6IjA0ZCJ9XX0seyJpZCI6NTU0NjI5LCJuYW1lIjoiU2hl
+        c3RveSBNaWtyb3JheW9uIiwiY29vcmQiOnsibG9uIjozNy41ODMzMjgsImxh
+        dCI6NTUuNTY2NjY5fSwibWFpbiI6eyJ0ZW1wIjoxNS4zNywicHJlc3N1cmUi
+        OjEwMTIsImh1bWlkaXR5Ijo3NywidGVtcF9taW4iOjExLjExLCJ0ZW1wX21h
+        eCI6MTcuNH0sImR0IjoxNDQxMzc5MTU2LCJ3aW5kIjp7InNwZWVkIjozLCJk
+        ZWciOjMyMH0sInN5cyI6eyJjb3VudHJ5IjoiIn0sImNsb3VkcyI6eyJhbGwi
+        Ojc1fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3VkcyIsImRl
+        c2NyaXB0aW9uIjoiYnJva2VuIGNsb3VkcyIsImljb24iOiIwNGQifV19LHsi
+        aWQiOjUwODEwMSwibmFtZSI6IlBvZG9sc2siLCJjb29yZCI6eyJsb24iOjM3
+        LjU1NDcyMiwibGF0Ijo1NS40MjQxNzl9LCJtYWluIjp7InRlbXAiOjE1LjY2
+        LCJwcmVzc3VyZSI6MTAxMiwiaHVtaWRpdHkiOjc3LCJ0ZW1wX21pbiI6MTEu
+        MTEsInRlbXBfbWF4IjoxNy40fSwiZHQiOjE0NDEzNzg2MjEsIndpbmQiOnsi
+        c3BlZWQiOjMsImRlZyI6MzIwfSwic3lzIjp7ImNvdW50cnkiOiIifSwiY2xv
+        dWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVyIjpbeyJpZCI6ODAzLCJtYWluIjoi
+        Q2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9rZW4gY2xvdWRzIiwiaWNvbiI6
+        IjA0ZCJ9XX1dfQo=
+    http_version: 
+  recorded_at: Fri, 04 Sep 2015 15:08:58 GMT
+recorded_with: VCR 2.9.3

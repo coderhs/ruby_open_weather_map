@@ -84,4 +84,20 @@ describe 'Current weather information with APPID' do
       expect(weather['list']).to be_kind_of(Array)
     end
   end
+
+  describe 'searching by cycle' do
+    let(:weather) do
+      VCR.use_cassette('integration/current_by_circle_zone') do
+        OpenWeather::Current.circle_zone(55.5, 37.5, 10, options)
+      end
+    end
+
+    it 'returns results' do
+      expect(weather).to include('list')
+    end
+
+    it 'returns results as an array' do
+      expect(weather['list']).to be_kind_of(Array)
+    end
+  end
 end

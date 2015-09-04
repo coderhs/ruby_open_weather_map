@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/find?cnt=10&lat=55.5&lon=37.5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 04 Sep 2015 15:03:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlIjoiYWNjdXJhdGUiLCJjb2QiOiIyMDAiLCJjb3VudCI6MTAs
+        Imxpc3QiOlt7ImlkIjo0OTUyNjAsIm5hbWUiOiJTaGNoZXJiaW5rYSIsImNv
+        b3JkIjp7ImxvbiI6MzcuNTU5NzE5LCJsYXQiOjU1LjQ5OTcyMn0sIm1haW4i
+        OnsidGVtcCI6Mjg4LjY4LCJwcmVzc3VyZSI6MTAxMywiaHVtaWRpdHkiOjgy
+        LCJ0ZW1wX21pbiI6Mjg0LjI2LCJ0ZW1wX21heCI6MjkxLjc1fSwiZHQiOjE0
+        NDEzNzU2MzUsIndpbmQiOnsic3BlZWQiOjMsImRlZyI6MjkwfSwic3lzIjp7
+        ImNvdW50cnkiOiIifSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVyIjpb
+        eyJpZCI6ODAzLCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9r
+        ZW4gY2xvdWRzIiwiaWNvbiI6IjA0ZCJ9XX0seyJpZCI6NTY0NTE3LCJuYW1l
+        IjoiRHVicm92aXRzeSIsImNvb3JkIjp7ImxvbiI6MzcuNDg2Njk4LCJsYXQi
+        OjU1LjQzOTY5fSwibWFpbiI6eyJ0ZW1wIjoyODguNjgsInByZXNzdXJlIjox
+        MDEzLCJodW1pZGl0eSI6ODIsInRlbXBfbWluIjoyODQuMjYsInRlbXBfbWF4
+        IjoyOTEuNzV9LCJkdCI6MTQ0MTM3NTYzNSwid2luZCI6eyJzcGVlZCI6Mywi
+        ZGVnIjoyOTB9LCJzeXMiOnsiY291bnRyeSI6IiJ9LCJjbG91ZHMiOnsiYWxs
+        Ijo3NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMsIm1haW4iOiJDbG91ZHMiLCJk
+        ZXNjcmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMiLCJpY29uIjoiMDRkIn1dfSx7
+        ImlkIjo1NzA1NzgsIm5hbWUiOiJCdXRvdm8iLCJjb29yZCI6eyJsb24iOjM3
+        LjU3OTcyLCJsYXQiOjU1LjU0ODMyOH0sIm1haW4iOnsidGVtcCI6Mjg4Ljcy
+        LCJwcmVzc3VyZSI6MTAxMywiaHVtaWRpdHkiOjgyLCJ0ZW1wX21pbiI6Mjg3
+        LjA0LCJ0ZW1wX21heCI6MjkwLjE1fSwiZHQiOjE0NDEzNzU2MzUsIndpbmQi
+        Onsic3BlZWQiOjMsImRlZyI6MjkwfSwic3lzIjp7ImNvdW50cnkiOiIifSwi
+        Y2xvdWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVyIjpbeyJpZCI6ODAzLCJtYWlu
+        IjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJicm9rZW4gY2xvdWRzIiwiaWNv
+        biI6IjA0ZCJ9XX0seyJpZCI6NTQ1NzgyLCJuYW1lIjoiS29tbXVuYXJrYSIs
+        ImNvb3JkIjp7ImxvbiI6MzcuNDg5MzE5LCJsYXQiOjU1LjU2OTUxOX0sIm1h
+        aW4iOnsidGVtcCI6Mjg4LjY3LCJwcmVzc3VyZSI6MTAxMywiaHVtaWRpdHki
+        OjgyLCJ0ZW1wX21pbiI6Mjg0LjI2LCJ0ZW1wX21heCI6MjkxLjc1fSwiZHQi
+        OjE0NDEzNzU2MzUsIndpbmQiOnsic3BlZWQiOjMsImRlZyI6MjkwfSwic3lz
+        Ijp7ImNvdW50cnkiOiIifSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJ3ZWF0aGVy
+        IjpbeyJpZCI6ODAzLCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJi
+        cm9rZW4gY2xvdWRzIiwiaWNvbiI6IjA0ZCJ9XX0seyJpZCI6NjQxNzQ5MCwi
+        bmFtZSI6Ikxlc3BhcmtraG96IiwiY29vcmQiOnsibG9uIjozNy42MDEzOTEs
+        ImxhdCI6NTUuNTQzMDZ9LCJtYWluIjp7InRlbXAiOjI4OC43MiwicHJlc3N1
+        cmUiOjEwMTMsImh1bWlkaXR5Ijo4MiwidGVtcF9taW4iOjI4Ny4wNCwidGVt
+        cF9tYXgiOjI5MC4xNX0sImR0IjoxNDQxMzc1NjM1LCJ3aW5kIjp7InNwZWVk
+        IjozLCJkZWciOjI5MH0sInN5cyI6eyJjb3VudHJ5IjoiIn0sImNsb3VkcyI6
+        eyJhbGwiOjc1fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3Vk
+        cyIsImRlc2NyaXB0aW9uIjoiYnJva2VuIGNsb3VkcyIsImljb24iOiIwNGQi
+        fV19LHsiaWQiOjUyNjczNiwibmFtZSI6IlNlZOKAmW1veSBNaWtyb3JheW9u
+        IiwiY29vcmQiOnsibG9uIjozNy41Nzk3MiwibGF0Ijo1NS41NjIyMjJ9LCJt
+        YWluIjp7InRlbXAiOjI4OC42OCwicHJlc3N1cmUiOjEwMTMsImh1bWlkaXR5
+        Ijo4MiwidGVtcF9taW4iOjI4Ny4wNCwidGVtcF9tYXgiOjI5MC4xNX0sImR0
+        IjoxNDQxMzc1MDM2LCJ3aW5kIjp7InNwZWVkIjozLCJkZWciOjI5MH0sInN5
+        cyI6eyJjb3VudHJ5IjoiIn0sImNsb3VkcyI6eyJhbGwiOjc1fSwid2VhdGhl
+        ciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3VkcyIsImRlc2NyaXB0aW9uIjoi
+        YnJva2VuIGNsb3VkcyIsImljb24iOiIwNGQifV19LHsiaWQiOjQ3MzA1MSwi
+        bmFtZSI6IlZsYXPigJl5ZXZvIiwiY29vcmQiOnsibG9uIjozNy4zNzk0NDQs
+        ImxhdCI6NTUuNDYwMjc4fSwibWFpbiI6eyJ0ZW1wIjoyODkuMjQsInByZXNz
+        dXJlIjoxMDEzLCJodW1pZGl0eSI6ODIsInRlbXBfbWluIjoyODcuMDQsInRl
+        bXBfbWF4IjoyOTEuNzV9LCJkdCI6MTQ0MTM3NTU2NSwid2luZCI6eyJzcGVl
+        ZCI6MywiZGVnIjoyOTB9LCJzeXMiOnsiY291bnRyeSI6IiJ9LCJjbG91ZHMi
+        OnsiYWxsIjo3NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMsIm1haW4iOiJDbG91
+        ZHMiLCJkZXNjcmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMiLCJpY29uIjoiMDRk
+        In1dfSx7ImlkIjo1Nzg2ODAsIm5hbWUiOiJCYWNodXJpbm8iLCJjb29yZCI6
+        eyJsb24iOjM3LjUyLCJsYXQiOjU1LjU4MDAwMn0sIm1haW4iOnsidGVtcCI6
+        Mjg4LjcsInByZXNzdXJlIjoxMDEzLCJodW1pZGl0eSI6ODIsInRlbXBfbWlu
+        IjoyODQuMjYsInRlbXBfbWF4IjoyOTIuMzV9LCJkdCI6MTQ0MTM3NTI2Nywi
+        d2luZCI6eyJzcGVlZCI6MywiZGVnIjoyOTB9LCJzeXMiOnsiY291bnRyeSI6
+        IiJ9LCJjbG91ZHMiOnsiYWxsIjo3NX0sIndlYXRoZXIiOlt7ImlkIjo4MDMs
+        Im1haW4iOiJDbG91ZHMiLCJkZXNjcmlwdGlvbiI6ImJyb2tlbiBjbG91ZHMi
+        LCJpY29uIjoiMDRkIn1dfSx7ImlkIjo1NTQ2MjksIm5hbWUiOiJTaGVzdG95
+        IE1pa3JvcmF5b24iLCJjb29yZCI6eyJsb24iOjM3LjU4MzMyOCwibGF0Ijo1
+        NS41NjY2Njl9LCJtYWluIjp7InRlbXAiOjI4OC43MiwicHJlc3N1cmUiOjEw
+        MTMsImh1bWlkaXR5Ijo4MiwidGVtcF9taW4iOjI4Ny4wNCwidGVtcF9tYXgi
+        OjI5MC4xNX0sImR0IjoxNDQxMzc1NjM1LCJ3aW5kIjp7InNwZWVkIjozLCJk
+        ZWciOjI5MH0sInN5cyI6eyJjb3VudHJ5IjoiIn0sImNsb3VkcyI6eyJhbGwi
+        Ojc1fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3VkcyIsImRl
+        c2NyaXB0aW9uIjoiYnJva2VuIGNsb3VkcyIsImljb24iOiIwNGQifV19LHsi
+        aWQiOjUwODEwMSwibmFtZSI6IlBvZG9sc2siLCJjb29yZCI6eyJsb24iOjM3
+        LjU1NDcyMiwibGF0Ijo1NS40MjQxNzl9LCJtYWluIjp7InRlbXAiOjI4OC42
+        NywicHJlc3N1cmUiOjEwMTMsImh1bWlkaXR5Ijo4MiwidGVtcF9taW4iOjI4
+        Ny4wNCwidGVtcF9tYXgiOjI5MC4xNX0sImR0IjoxNDQxMzc1MTI1LCJ3aW5k
+        Ijp7InNwZWVkIjozLCJkZWciOjI5MH0sInN5cyI6eyJjb3VudHJ5IjoiIn0s
+        ImNsb3VkcyI6eyJhbGwiOjc1fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFp
+        biI6IkNsb3VkcyIsImRlc2NyaXB0aW9uIjoiYnJva2VuIGNsb3VkcyIsImlj
+        b24iOiIwNGQifV19XX0K
+    http_version: 
+  recorded_at: Fri, 04 Sep 2015 15:03:11 GMT
+recorded_with: VCR 2.9.3

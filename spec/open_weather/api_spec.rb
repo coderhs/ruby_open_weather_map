@@ -79,6 +79,22 @@ describe 'Open weather Current API' do
     end
   end
 
+  context '.circle_zone' do
+    it 'return current weather for the cities in cycle' do
+      response = VCR.use_cassette('api/current_circle_zone_valid') do
+        OpenWeather::Current.circle_zone(55.5, 37.5, 10)
+      end
+      response['count'].should eq(10) # exceptionally called `count` here
+    end
+
+    it 'return error if count is negative' do
+      response = VCR.use_cassette('api/current_circle_zone_invalid') do
+        OpenWeather::Current.circle_zone(55.5, 37.5, -10)
+      end
+      response['cod'].should eq("500")
+    end
+  end
+
   context 'units option' do
     it 'returns the current temperature in requested units' do
       response = VCR.use_cassette('api/current_city_metric_valid') do

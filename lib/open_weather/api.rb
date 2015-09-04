@@ -39,6 +39,13 @@ module OpenWeather
       new(options.merge(bbox: bbox)).retrieve url
     end
 
+    # Circle zone (lat, lon and count of cities to return)
+    # Usage: OpenWeather::Current.circle_zone(55.5, 37.5, 10)
+    def circle_zone(lat, lon, count, options = {})
+      url = 'http://api.openweathermap.org/data/2.5/find'
+      new(options.merge(lat: lat, lon: lon, cnt: count)).retrieve url
+    end
+
     private
     # Encodes an array in the format expected by the API (comma-separated list)
     def encode_array(arr)
