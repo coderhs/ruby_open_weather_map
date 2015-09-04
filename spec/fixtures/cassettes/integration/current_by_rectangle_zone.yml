@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/box/city?APPID=1111111111&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 04 Sep 2015 14:48:25 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"message":"","cod":"500"}
+    http_version: 
+  recorded_at: Fri, 04 Sep 2015 14:48:24 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/box/city?APPID=1111111111&bbox=12,32,15,37,10&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 04 Sep 2015 14:51:01 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cod":"200","calctime":1.152,"cnt":15,"list":[{"id":2208791,"name":"Yafran","coord":{"lon":12.52859,"lat":32.06329},"main":{"temp":39.75,"temp_min":39.747,"temp_max":39.747,"pressure":1006.69,"sea_level":1026.3,"grnd_level":1006.69,"humidity":21},"dt":1441374580,"wind":{"speed":2.71,"deg":38.5002},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2208425,"name":"Zuwarah","coord":{"lon":12.08199,"lat":32.931198},"main":{"temp":35.42,"temp_min":35.416,"temp_max":35.416,"pressure":1024.08,"sea_level":1025.06,"grnd_level":1024.08,"humidity":45},"dt":1441374579,"wind":{"speed":4.27,"deg":91.0012},"clouds":{"all":36},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}]},{"id":2212771,"name":"Sabratah","coord":{"lon":12.48845,"lat":32.79335},"main":{"temp":39.75,"temp_min":39.747,"temp_max":39.747,"pressure":1006.69,"sea_level":1026.3,"grnd_level":1006.69,"humidity":21},"dt":1441374580,"wind":{"speed":2.71,"deg":38.5002},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2217362,"name":"Gharyan","coord":{"lon":13.02028,"lat":32.172218},"main":{"temp":38.82,"temp_min":38.816,"temp_max":38.816,"pressure":994.49,"sea_level":1025.88,"grnd_level":994.49,"humidity":18},"dt":1441374580,"wind":{"speed":1.67,"deg":202.001},"clouds":{"all":20},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}]},{"id":2216885,"name":"Zawiya","coord":{"lon":12.72778,"lat":32.75222},"main":{"temp":39.75,"temp_min":39.747,"temp_max":39.747,"pressure":1006.69,"sea_level":1026.3,"grnd_level":1006.69,"humidity":21},"dt":1441374580,"wind":{"speed":2.71,"deg":38.5002},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2210247,"name":"Tripoli","coord":{"lon":13.18746,"lat":32.875191},"main":{"temp":30.87,"temp_min":30.866,"temp_max":30.866,"pressure":1024.65,"sea_level":1025.96,"grnd_level":1024.65,"humidity":80},"dt":1441374580,"wind":{"speed":7.87,"deg":75.0012},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2210221,"name":"Tarhuna","coord":{"lon":13.6332,"lat":32.43502},"main":{"temp":39.37,"temp_min":39.366,"temp_max":39.366,"pressure":994.33,"sea_level":1026.32,"grnd_level":994.33,"humidity":16},"dt":1441374580,"wind":{"speed":2.82,"deg":135.501},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2215163,"name":"Masallatah","coord":{"lon":14,"lat":32.616669},"main":{"temp":37.6,"temp_min":37.597,"temp_max":37.597,"pressure":1014.56,"sea_level":1027.72,"grnd_level":1014.56,"humidity":23},"dt":1441374580,"wind":{"speed":4.06,"deg":81.0002},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2219905,"name":"Al Khums","coord":{"lon":14.26191,"lat":32.648609},"main":{"temp":37.6,"temp_min":37.597,"temp_max":37.597,"pressure":1014.56,"sea_level":1027.72,"grnd_level":1014.56,"humidity":23},"dt":1441374581,"wind":{"speed":4.06,"deg":81.0002},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2208485,"name":"Zlitan","coord":{"lon":14.56874,"lat":32.467381},"main":{"temp":38.22,"temp_min":38.216,"temp_max":38.216,"pressure":1013.62,"sea_level":1026.85,"grnd_level":1013.62,"humidity":24},"dt":1441374580,"wind":{"speed":3.87,"deg":91.5012},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2563191,"name":"Birkirkara","coord":{"lon":14.46111,"lat":35.897221},"main":{"temp":33.65,"pressure":1015,"humidity":36,"temp_min":32.6,"temp_max":34.44},"dt":1441374636,"wind":{"speed":3.1,"deg":240,"var_beg":190,"var_end":270},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2523650,"name":"Ragusa","coord":{"lon":14.71719,"lat":36.928242},"main":{"temp":34.26,"pressure":1013,"humidity":35,"temp_min":31,"temp_max":37},"dt":1441374630,"wind":{"speed":6.2,"deg":60},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2523693,"name":"Pozzallo","coord":{"lon":14.84989,"lat":36.730541},"main":{"temp":28.35,"temp_min":28.347,"temp_max":28.347,"pressure":1026.39,"sea_level":1028.41,"grnd_level":1026.39,"humidity":94},"dt":1441374630,"wind":{"speed":4.11,"deg":242.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2524119,"name":"Modica","coord":{"lon":14.77399,"lat":36.84594},"main":{"temp":28.35,"temp_min":28.347,"temp_max":28.347,"pressure":1026.39,"sea_level":1028.41,"grnd_level":1026.39,"humidity":94},"dt":1441374631,"wind":{"speed":4.11,"deg":242.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]},{"id":2523581,"name":"Rosolini","coord":{"lon":14.94779,"lat":36.824242},"main":{"temp":28.35,"temp_min":28.347,"temp_max":28.347,"pressure":1026.39,"sea_level":1028.41,"grnd_level":1026.39,"humidity":94},"dt":1441374630,"wind":{"speed":4.11,"deg":242.5},"clouds":{"all":0},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}]}]}
+    http_version: 
+  recorded_at: Fri, 04 Sep 2015 14:51:00 GMT
+recorded_with: VCR 2.9.3

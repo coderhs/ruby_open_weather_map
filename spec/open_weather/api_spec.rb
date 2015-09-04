@@ -50,14 +50,30 @@ describe 'Open weather Current API' do
   context '.cities' do
     it 'return current weather for list of cities' do
       response = VCR.use_cassette('api/current_cities_valid') do
-        OpenWeather::Current.cities([524901,703448,2643743])
+        OpenWeather::Current.cities([524901, 703448, 2643743])
       end
       response['cnt'].should eq(3)
     end
 
     it 'return empty list if cities are invalid' do
       response = VCR.use_cassette('api/current_cities_invalid') do
-        OpenWeather::Current.cities([42,1000])
+        OpenWeather::Current.cities([42, 1000])
+      end
+      response['cnt'].should eq(0)
+    end
+  end
+
+  context '.rectangle_zone' do
+    it 'return current weather for the cities in a bounding box' do
+      response = VCR.use_cassette('api/current_rectangle_zone_valid') do
+        OpenWeather::Current.rectangle_zone(12, 32, 15, 37, 10)
+      end
+      response['cnt'].should eq(15)
+    end
+
+    it 'return empty list if bounding box is invalid' do
+      response = VCR.use_cassette('api/current_rectangle_zone_invalid') do
+        OpenWeather::Current.rectangle_zone(-5, -5, -5, -5, -5)
       end
       response['cnt'].should eq(0)
     end
