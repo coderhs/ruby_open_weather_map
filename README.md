@@ -31,6 +31,9 @@ OpenWeather::Current.city_id("1273874")
 # get current weather by geocode. (lat, lon)
 OpenWeather::Current.geocode(9.94, 76.26)
 
+# get current weather for a list of city ids
+OpenWeather::Current.cities([524901,703448,2643743])
+
 # get the current weather in degrees celsius
 OpenWeather::Current.city("Cochin, IN", units: 'metric')
 ```
