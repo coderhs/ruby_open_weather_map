@@ -12,8 +12,8 @@ module OpenWeather
       @options = extract_options!(options)
     end
 
-    def retrieve
-      response = send_request unless @options.empty?
+    def retrieve(url=nil)
+      response = send_request url unless @options.empty?
       parse_response(response)
     end
 
@@ -25,7 +25,7 @@ module OpenWeather
 
     def extract_options!(options)
       valid_options = [ :id, :lat, :lon, :cnt, :city, :lang, :units, :APPID,
-        :country]
+        :country, :bbox]
 
       options.keys.each { |k| options.delete(k) unless valid_options.include?(k) }
 
@@ -46,8 +46,9 @@ module OpenWeather
       @weather_info
     end
 
-    def send_request
-      uri       = URI(@url)
+    def send_request(url=nil)
+      url       = url || @url
+      uri       = URI(url)
       uri.query = URI.encode_www_form(options)
       Net::HTTP.get(uri)
     end

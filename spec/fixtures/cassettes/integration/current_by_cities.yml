@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/group?APPID=1111111111&id=524901,703448,2643743&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Sep 2015 18:55:49 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"cnt":3,"list":[{"coord":{"lon":37.62,"lat":55.75},"sys":{"type":1,"id":7323,"message":0.0059,"country":"RU","sunrise":1441247914,"sunset":1441297148},"weather":[{"id":520,"main":"Rain","description":"light intensity shower rain","icon":"09n"}],"main":{"temp":13.41,"pressure":1014,"humidity":82,"temp_min":11.11,"temp_max":14.8},"wind":{"speed":3,"deg":110},"clouds":{"all":75},"dt":1441306336,"id":524901,"name":"Moscow"},{"coord":{"lon":30.52,"lat":50.43},"sys":{"type":1,"id":7358,"message":0.0036,"country":"UA","sunrise":1441250136,"sunset":1441298334},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01n"}],"main":{"temp":21.76,"pressure":1013,"humidity":69,"temp_min":21,"temp_max":23},"wind":{"speed":2,"deg":350,"var_beg":300,"var_end":20},"clouds":{"all":0},"dt":1441305454,"id":703448,"name":"Kiev"},{"coord":{"lon":-0.13,"lat":51.51},"sys":{"type":1,"id":5093,"message":0.0037,"country":"GB","sunrise":1441257404,"sunset":1441305770},"weather":[{"id":520,"main":"Rain","description":"light intensity shower rain","icon":"09n"}],"main":{"temp":12.76,"pressure":1016,"humidity":76,"temp_min":11,"temp_max":15},"wind":{"speed":2.6,"deg":10,"var_beg":330,"var_end":40},"clouds":{"all":40},"dt":1441306250,"id":2643743,"name":"London"}]}
+    http_version: 
+  recorded_at: Thu, 03 Sep 2015 18:55:48 GMT
+recorded_with: VCR 2.9.3

@@ -47,6 +47,54 @@ describe 'Open weather Current API' do
     end
   end
 
+  context '.cities' do
+    it 'return current weather for list of cities' do
+      response = VCR.use_cassette('api/current_cities_valid') do
+        OpenWeather::Current.cities([524901, 703448, 2643743])
+      end
+      response['list'].count.should eq(3)
+    end
+
+    it 'return empty list if cities are invalid' do
+      response = VCR.use_cassette('api/current_cities_invalid') do
+        OpenWeather::Current.cities([42, 1000])
+      end
+      response['list'].count.should eq(0)
+    end
+  end
+
+  context '.rectangle_zone' do
+    it 'return current weather for the cities in a bounding box' do
+      response = VCR.use_cassette('api/current_rectangle_zone_valid') do
+        OpenWeather::Current.rectangle_zone(12, 32, 15, 37, 10)
+      end
+      response['list'].count.should eq(15)
+    end
+
+    it 'return empty list if bounding box is invalid' do
+      response = VCR.use_cassette('api/current_rectangle_zone_invalid') do
+        OpenWeather::Current.rectangle_zone(-5, -5, -5, -5, -5)
+      end
+      response['list'].count.should eq(0)
+    end
+  end
+
+  context '.circle_zone' do
+    it 'return current weather for the cities in cycle' do
+      response = VCR.use_cassette('api/current_circle_zone_valid') do
+        OpenWeather::Current.circle_zone(55.5, 37.5, 10)
+      end
+      response['list'].count.should eq(10)
+    end
+
+    it 'return error if count is negative' do
+      response = VCR.use_cassette('api/current_circle_zone_invalid') do
+        OpenWeather::Current.circle_zone(55.5, 37.5, -10)
+      end
+      response['cod'].should eq("500")
+    end
+  end
+
   context 'units option' do
     it 'returns the current temperature in requested units' do
       response = VCR.use_cassette('api/current_city_metric_valid') do
