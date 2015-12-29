@@ -29,11 +29,7 @@ module OpenWeather
 
       options.keys.each { |k| options.delete(k) unless valid_options.include?(k) }
 
-      if options[:zip]
-        options[:q] = "#{options[:zip]}, #{options[:country]}"
-        options.delete(:zip)
-        options.delete(:country)
-      elsif options[:city] || options[:country]
+      if options[:city] || options[:country]
         options[:q] = "#{options[:country]},#{options[:city]}"
         options.delete(:city)
         options.delete(:country)
