@@ -8,7 +8,7 @@ module OpenWeather
     end
 
     def zip(zip, options ={})
-      new(options.merge(zip: zip +",us")).retrieve
+      new(options.merge(zip: zip)).retrieve
     end
 
     # City Id, an integer value. Eg, 2172797
