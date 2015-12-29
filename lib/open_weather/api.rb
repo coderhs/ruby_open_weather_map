@@ -7,6 +7,8 @@ module OpenWeather
       new(options.merge(city: city)).retrieve
     end
 
+    #Zip format : 33704,US
+    #Usage: OpenWeather::Current.zip('33704,Us')
     def zip(zip, options ={})
       new(options.merge(zip: zip)).retrieve
     end
