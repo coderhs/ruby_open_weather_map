@@ -60,7 +60,7 @@ OpenWeather::Forecast.city("Cochin, IN")
 OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
 
 # get weather forecast by zip code
-OpenWeather::Forecast.zip("33704")
+OpenWeather::Forecast.zip("33704,US")
 
 # get weather forecast by city id
 OpenWeather::Forecast.city_id("1273874")
