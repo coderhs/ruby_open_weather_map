@@ -48,10 +48,10 @@ OpenWeather::Current.geocode(9.94, 76.26 , options)
 OpenWeather::Current.cities([524901, 703448, 2643743], options)
 
 # get current weather for a bounding box
-OpenWeather::Current.rectangle_zone(12, 32, 15, 37, 10)
+OpenWeather::Current.rectangle_zone(12, 32, 15, 37, 10, options)
 
 # get current weather for cities around a point
-OpenWeather::Current.circle_zone(55.5, 37.5, 10)
+OpenWeather::Current.circle_zone(55.5, 37.5, 10, options)
 
 # By default temperature is returned in fahrenheit to get the current weather in degrees celsius use unit as follows.
 options = { units: "metric", APPID: "1111111111" }
@@ -68,31 +68,32 @@ http://openweathermap.org/current
 require 'open_weather'
 
 # get weather forecast by city name
-OpenWeather::Forecast.city("Cochin, IN")
+OpenWeather::Forecast.city("Cochin, IN", options)
 
 # get weather forecast by city name in fahrenheit
-OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
+OpenWeather::Forecast.city("Cochin, IN", options)
 
 # get weather forecast by city id
-OpenWeather::Forecast.city_id("1273874")
+OpenWeather::Forecast.city_id("1273874", options)
 
 # get weather forecast by geocode. (lat, lon)
-OpenWeather::Forecast.geocode(9.94, 76.26)
+OpenWeather::Forecast.geocode(9.94, 76.26, options)
 
 # get daily weather forecast by city name
-OpenWeather::ForecastDaily.city("Cochin, IN")
+OpenWeather::ForecastDaily.city("Cochin, IN", options)
 
 # get daily weather forecast by city name in fahrenheit
-OpenWeather::ForecastDaily.city("Cochin, IN", units: 'imperial')
+OpenWeather::ForecastDaily.city("Cochin, IN", options)
 
 # get daily weather forecast by city id
-OpenWeather::ForecastDaily.city_id("1273874")
+OpenWeather::ForecastDaily.city_id("1273874", options)
 
 # get daily weather forecast by geocode. (lat, lon)
-OpenWeather::ForecastDaily.geocode(9.94, 76.26)
+OpenWeather::ForecastDaily.geocode(9.94, 76.26, options)
 
 # get daily weather forecast for 6 days
-OpenWeather::ForecastDaily.city_id("1273874", cnt: 6)
+options[:cnt] = 6
+OpenWeather::ForecastDaily.city_id("1273874", options)
 ```
 
 Doucumentation about the weather forecast end-point:
@@ -104,7 +105,8 @@ http://openweathermap.org/forecast
 
 ```ruby
 # get current weather in german
-OpenWeather::Current.city("Berlin, DE", lang: "de")
+options[:lang] = "de"
+OpenWeather::Current.city("Berlin, DE",options)
 ```
 
 Available languages are listed at:
