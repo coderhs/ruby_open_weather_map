@@ -17,19 +17,32 @@ Add the following to your **Gemfile**
 ## Usage
 
 
+#### Getting and using the API key
+
+How to get an API key and tips for an effective usage of the API:
+http://openweathermap.org/appid
+
+
+```ruby
+# get current weather by city name
+options = { units: "metric", APPID: "1111111111" }
+OpenWeather::Current.city("Berlin, DE", options)
+```
+
 ### Current weather information API
+
 
 ```ruby
 require 'open_weather'
 
 # get current weather by city name
-OpenWeather::Current.city("Cochin, IN")
+OpenWeather::Current.city("Cochin, IN", options)
 
 # get current weather by city id
-OpenWeather::Current.city_id("1273874")
+OpenWeather::Current.city_id("1273874", options)
 
 # get current weather by geocode. (lat, lon)
-OpenWeather::Current.geocode(9.94, 76.26)
+OpenWeather::Current.geocode(9.94, 76.26 , options)
 
 # get current weather for a list of city ids
 OpenWeather::Current.cities([524901, 703448, 2643743])
@@ -40,8 +53,9 @@ OpenWeather::Current.rectangle_zone(12, 32, 15, 37, 10)
 # get current weather for cities around a point
 OpenWeather::Current.circle_zone(55.5, 37.5, 10)
 
-# get the current weather in degrees celsius
-OpenWeather::Current.city("Cochin, IN", units: 'metric')
+# By default temperature is returned in fahrenheit to get the current weather in degrees celsius use unit as follows.
+options = { units: "metric", APPID: "1111111111" }
+OpenWeather::Current.city("Cochin, IN", options)
 ```
 
 Documentation about the current weather end-point:
@@ -84,16 +98,7 @@ OpenWeather::ForecastDaily.city_id("1273874", cnt: 6)
 Doucumentation about the weather forecast end-point:
 http://openweathermap.org/forecast
 
-#### Using the API key
 
-```ruby
-# get current weather by city name
-options = { units: "metric", APPID: 1111111111 }
-OpenWeather::Current.city("Berlin, DE", options)
-```
-
-How to get an API key and tips for an effective usage of the API:
-http://openweathermap.org/appid
 
 #### Multilingual support
 
