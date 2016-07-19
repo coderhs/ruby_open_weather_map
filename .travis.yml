@@ -1,5 +1,8 @@
 language: ruby
 rvm:
   - 2.1.5
+before_install:
+  - gem update --system
+  - gem --version
 script:
   - bundle exec rspec
