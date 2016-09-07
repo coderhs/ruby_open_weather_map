@@ -1,5 +1,10 @@
 language: ruby
 rvm:
   - 2.1.5
+before_install:
+  - gem update --system
+install:
+  - "gem install bundler"
+  - "bundle install --jobs=3 --retry=3"
 script:
   - bundle exec rspec
