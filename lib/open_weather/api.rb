@@ -7,6 +7,12 @@ module OpenWeather
       new(options.merge(city: city)).retrieve
     end
 
+    #Zip format : 33704,US
+    #Usage: OpenWeather::Current.zip('33704,Us')
+    def zip(zip, options ={})
+      new(options.merge(zip: zip)).retrieve
+    end
+
     # City Id, an integer value. Eg, 2172797
     # Usage: OpenWeather::Current.city_id(2172797)
     def city_id(id, options = {})

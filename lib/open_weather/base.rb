@@ -24,7 +24,7 @@ module OpenWeather
     private
 
     def extract_options!(options)
-      valid_options = [ :id, :lat, :lon, :cnt, :city, :lang, :units, :APPID,
+      valid_options = [ :id, :zip, :lat, :lon, :cnt, :city, :lang, :units, :APPID,
         :country, :bbox]
 
       options.keys.each { |k| options.delete(k) unless valid_options.include?(k) }

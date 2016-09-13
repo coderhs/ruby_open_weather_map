@@ -59,6 +59,9 @@ OpenWeather::Forecast.city("Cochin, IN")
 # get weather forecast by city name in fahrenheit
 OpenWeather::Forecast.city("Cochin, IN", units: 'imperial')
 
+# get weather forecast by zip code
+OpenWeather::Forecast.zip("33704,US")
+
 # get weather forecast by city id
 OpenWeather::Forecast.city_id("1273874")
 
@@ -81,7 +84,7 @@ OpenWeather::ForecastDaily.geocode(9.94, 76.26)
 OpenWeather::ForecastDaily.city_id("1273874", cnt: 6)
 ```
 
-Doucumentation about the weather forecast end-point:
+Documentation about the weather forecast end-point:
 http://openweathermap.org/forecast
 
 #### Using the API key
