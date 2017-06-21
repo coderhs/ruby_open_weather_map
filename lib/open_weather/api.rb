@@ -20,9 +20,20 @@ module OpenWeather
   end
 
   module SeveralCitiesClassMethods
+    # Max amount of city IDs that can be requested at once,
+    # from http://openweathermap.org/current
+    LOCATIONS_LIMIT = 20
+
     # City Ids, an array of integer values. Eg, [2172797, 524901]
     # Usage: OpenWeather::Current.cities([2172797, 524901])
+    #
+    # Note that every ID in the array counts as an API call.
+    # A LocationsLimitExceeded error is raised if the API limit is exceeded.
     def cities(ids, options = {})
+      if ids.length > SeveralCitiesClassMethods::LOCATIONS_LIMIT
+        raise LocationsLimitExceeded
+      end
+
       url = 'http://api.openweathermap.org/data/2.5/group'
       ids = encode_array ids
       new(options.merge(id: ids)).retrieve url

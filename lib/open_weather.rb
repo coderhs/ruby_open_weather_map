@@ -9,4 +9,5 @@ module OpenWeather
   autoload :VERSION,       'open_weather/version'
 
   require 'open_weather/api.rb'
+  require 'open_weather/exceptions.rb'
 end
