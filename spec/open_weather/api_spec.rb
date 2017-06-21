@@ -61,6 +61,12 @@ describe 'Open weather Current API' do
       end
       response['list'].count.should eq(0)
     end
+
+    it 'raises a LocationsLimitExceeded exception with too many city IDs' do
+      expect {
+        OpenWeather::Current.cities([0] * 1000)
+      }.to raise_error OpenWeather::LocationsLimitExceeded
+    end
   end
 
   context '.rectangle_zone' do
