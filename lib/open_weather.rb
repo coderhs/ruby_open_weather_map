@@ -6,6 +6,7 @@ module OpenWeather
   autoload :Forecast,      'open_weather/forecast'
   autoload :ForecastDaily, 'open_weather/forecast_daily'
   autoload :Find,          'open_weather/find'
+  autoload :History,       'open_weather/history'
   autoload :VERSION,       'open_weather/version'
 
   require 'open_weather/api.rb'
