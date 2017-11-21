@@ -68,6 +68,10 @@ module OpenWeather
     extend ClassMethods
   end
 
+  class History
+    extend ClassMethods
+  end
+
   class Current
     extend SeveralCitiesClassMethods
   end
