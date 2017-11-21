@@ -266,3 +266,68 @@ describe 'Open weather Forecast Daily API' do
     end
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe 'Open weather History API' do
+  context '.city' do
+    it 'return current weather for cochi' do
+      response = VCR.use_cassette('api/history_city_valid') do
+        OpenWeather::History.city('Cochin, In')
+      end
+      response['cod'].should eq('200')
+
+    end
+
+    it 'returns error if the city is invalid' do
+      response = VCR.use_cassette('api/history_city_invalid') do
+        OpenWeather::History.city('Cochiiiiiin, In')
+      end
+      response['error'].should eq('404')
+    end
+  end
+
+  context '.city_id' do
+    it 'return current weather for city id of cochi' do
+      response = VCR.use_cassette('api/history_city_id_valid') do
+        OpenWeather::History.city_id('1273874')
+      end
+      response['cod'].should eq('200')
+    end
+
+    it 'returns error if the city id is invalid' do
+      response = VCR.use_cassette('api/history_city_id_invalid') do
+        OpenWeather::History.city('invalidid')
+      end
+      response['error'].should eq('404')
+    end
+  end
+
+  context '.geocode' do
+    it 'return current weather for geocode of cochi' do
+      response = VCR.use_cassette('api/history_geocode_valid') do
+        OpenWeather::History.geocode('9.94', '76.26')
+      end
+      response['cod'].should eq('200')
+    end
+
+    it 'returns error if the geocode is invalid' do
+      response = VCR.use_cassette('api/history_geocode_invalid') do
+        OpenWeather::History.geocode('181', '181')
+      end
+      response['error'].should eq('404')
+    end
+  end
+end
