@@ -96,6 +96,22 @@ options[:cnt] = 6
 OpenWeather::ForecastDaily.city_id("1273874", options)
 ```
 
+### Weather history API
+
+
+```ruby
+require 'open_weather'
+
+# get weather history by city name
+OpenWeather::History.city("Cochin, IN", options)
+
+# get weather history by city id
+OpenWeather::History.city_id("1273874", options)
+
+# get weather history by geocode. (lat, lon)
+OpenWeather::History.geocode(9.94, 76.26, options)
+```
+
 Doucumentation about the weather forecast end-point:
 http://openweathermap.org/forecast
 
