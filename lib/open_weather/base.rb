@@ -30,7 +30,7 @@ module OpenWeather
       options.keys.each { |k| options.delete(k) unless valid_options.include?(k) }
 
       if options[:city] || options[:country]
-        options[:q] = "#{options[:country]},#{options[:city]}"
+        options[:q] = [options[:city], options[:country]].compact.join(',')
         options.delete(:city)
         options.delete(:country)
       end
