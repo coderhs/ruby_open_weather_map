@@ -34,7 +34,7 @@ module OpenWeather
         raise LocationsLimitExceeded
       end
 
-      url = 'http://api.openweathermap.org/data/2.5/group'
+      url = Base::API_URL + '/group'
       ids = encode_array ids
       new(options.merge(id: ids)).retrieve url
     end
@@ -44,7 +44,7 @@ module OpenWeather
     def rectangle_zone(top_left_lat, top_left_lon,
                        bottom_right_lat, bottom_right_lon,
                        map_zoom, options = {})
-      url = 'http://api.openweathermap.org/data/2.5/box/city'
+      url = Base::API_URL + '/box/city'
       bbox = encode_array [top_left_lat, top_left_lon, bottom_right_lat,
               bottom_right_lon, map_zoom]
       new(options.merge(bbox: bbox)).retrieve url
@@ -53,7 +53,7 @@ module OpenWeather
     # Circle zone (lat, lon and count of cities to return)
     # Usage: OpenWeather::Current.circle_zone(55.5, 37.5, 10)
     def circle_zone(lat, lon, count, options = {})
-      url = 'http://api.openweathermap.org/data/2.5/find'
+      url = Base::API_URL + '/find'
       new(options.merge(lat: lat, lon: lon, cnt: count)).retrieve url
     end
 

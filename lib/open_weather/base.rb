@@ -3,7 +3,8 @@ require 'json'
 
 module OpenWeather
   class Base
-
+    API_URL = 'https://api.openweathermap.org/data/2.5'
+    
     attr_reader :url, :options, :weather_info, :status, :message
 
     def initialize(url, options)

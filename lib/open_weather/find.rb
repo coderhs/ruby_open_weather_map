@@ -1,7 +1,7 @@
 module OpenWeather
   class Find < Base
     def initialize(options = {})
-      super('http://api.openweathermap.org/data/2.5/find', options)
+      super(API_URL + '/find', options)
     end
 
     def self.like(q, options = {})
